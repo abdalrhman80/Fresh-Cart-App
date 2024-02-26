@@ -1,0 +1,15 @@
+.empty-cart {
+    width: 600px;
+}
+
+@media screen and (max-width:768px) {
+    .empty-cart {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width:567px) {
+    .empty-cart {
+        width: 330px;
+    }
+}
