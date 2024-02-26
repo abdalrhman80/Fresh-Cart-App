@@ -16,7 +16,7 @@ export class OrdersService {
 
   checkOut(cartId: string, shippingAddressData: any): Observable<any> {
     // http://localhost:4200
-    return this._HttpClient.post(`${this.baseUrl}/api/v1/orders/checkout-session/${cartId}?url=https://abdalrhman80.github.io/ `
+    return this._HttpClient.post(`${this.baseUrl}/api/v1/orders/checkout-session/${cartId}?url=https://abdalrhman80.github.io/Fresh-Cart-App `
       , { shippingAddress: shippingAddressData }
     )
   }
