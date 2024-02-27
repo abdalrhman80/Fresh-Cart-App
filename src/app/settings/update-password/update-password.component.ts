@@ -24,10 +24,6 @@ export class UpdatePasswordComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    document.body.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
     this.isLoadingLayerMethod()
   }
 

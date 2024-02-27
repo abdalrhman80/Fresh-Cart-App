@@ -9,11 +9,17 @@
     <div *ngIf="cartList.length != 0">
         <div class="row">
             <div class="col-md-6">
-                <p class="text-main  fw-bolder">Number of cart items: {{numOfCartItems}}</p>
+                <p class="  fw-bolder text-body-tertiary ">
+                    <span class=" text-black">Number of cart items: </span>
+                    {{numOfCartItems}}
+                </p>
             </div>
             <div class="col-md-6 ">
                 <div class="total-price ">
-                    <p class="text-main  fw-bolder">Total price: {{totalCartPrice}}</p>
+                    <p class="  fw-bolder text-body-tertiary ">
+                        <span class=" text-black">Total price:</span>
+                        {{totalCartPrice | currency: ' '}} EGP
+                    </p>
                 </div>
             </div>
         </div>

@@ -21,10 +21,6 @@ export class OrderDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    document.body.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
     document.body.style.overflow = 'hidden'
     this.isLoading = true
     this.getUserId()

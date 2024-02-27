@@ -21,10 +21,6 @@ export class VerifyCodeComponent {
     resetCode: new FormControl(null, [Validators.required, Validators.pattern(/^[0-9]{6,10}$/)]),
   })
   ngOnInit(): void {
-    document.body.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
     this.isLoadingMethod()
   }
 

@@ -19,10 +19,6 @@ export class CartComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    document.body.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
     document.body.style.overflow = 'hidden'
     this.isLoading = true
     this.getLoggedUserCart()

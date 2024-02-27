@@ -33,10 +33,6 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    document.body.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
     this.isLoadingLayerMethod()
   }
 

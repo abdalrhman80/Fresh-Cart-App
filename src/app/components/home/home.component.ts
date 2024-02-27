@@ -27,10 +27,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.isLoading = true
     document.body.style.overflow = 'hidden'
-    document.body.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
     this.getAllProducts();
     if (localStorage.getItem('userToken')) {
       this.isUser = true

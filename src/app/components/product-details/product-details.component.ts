@@ -46,11 +46,14 @@ export class ProductDetailsComponent implements OnInit {
 
   carouselOptions: OwlOptions = {
     loop: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplaySpeed: 600,
     mouseDrag: true,
-    touchDrag: false,
+    touchDrag: true,
     pullDrag: false,
     dots: false,
-    navSpeed: 700,
+    navSpeed: 400,
     navText: ['', ''],
     responsive: {
       0: {
@@ -68,10 +71,6 @@ export class ProductDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    document.body.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
     document.body.style.overflow = 'hidden'
     this.isLoading = true
     this.getProductId();
