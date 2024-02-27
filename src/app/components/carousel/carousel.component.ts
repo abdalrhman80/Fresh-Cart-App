@@ -17,7 +17,7 @@ export class CarouselComponent implements OnInit {
     autoplayTimeout: 2000,
     autoplaySpeed: 600,
     mouseDrag: true,
-    touchDrag: false,
+    touchDrag: true,
     pullDrag: false,
     dots: false,
     navSpeed: 400,

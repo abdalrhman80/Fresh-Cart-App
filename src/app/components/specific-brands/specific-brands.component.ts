@@ -23,6 +23,10 @@ export class SpecificBrandsComponent implements OnInit {
   constructor(private _ProductService: ProductService, private _ActivatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
     this.isLoading = true
     this.getBrandId();
     this.getBrandDetails();

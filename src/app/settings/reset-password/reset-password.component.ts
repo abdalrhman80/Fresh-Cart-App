@@ -23,6 +23,10 @@ export class ResetPasswordComponent {
     Validators.pattern(/^[A-Z][a-z0-9]{6,20}$/)]),
   })
   ngOnInit(): void {
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
     this.isLoadingMethod()
   }
 

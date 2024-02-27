@@ -68,6 +68,11 @@ export class ProductDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+    document.body.style.overflow = 'hidden'
     this.isLoading = true
     this.getProductId();
     this.getProductDetails();
@@ -83,6 +88,7 @@ export class ProductDetailsComponent implements OnInit {
       next: (response) => {
         this.isLoading = false
         this.productDetails = response.data
+        document.body.style.overflow = 'auto'
       },
       error: (err) => {
         this.isLoading = false

@@ -36,6 +36,10 @@ export class RegisterComponent {
   ) { }
 
   ngOnInit(): void {
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
     this.isLoadingLayerMethod()
   }
 

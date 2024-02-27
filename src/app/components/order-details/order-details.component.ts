@@ -21,6 +21,11 @@ export class OrderDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+    document.body.style.overflow = 'hidden'
     this.isLoading = true
     this.getUserId()
     this.getAllOrders()
@@ -39,6 +44,7 @@ export class OrderDetailsComponent implements OnInit {
         this.isLoading = false
         this.orders = response
         this.getSpecificOrder()
+        document.body.style.overflow = 'auto'
       },
       error: (err) => {
         this.isLoading = false

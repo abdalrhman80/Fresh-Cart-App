@@ -1,10 +1,16 @@
 <app-loader *ngIf="isLoading"></app-loader>
 
+<div class=" my-4 w-75 mx-auto">
+    <input [(ngModel)]="searchedItem" type="text" class="form-control " placeholder="Search by title" />
+</div>
+
 <!-- Main Content -->
 <div class="row g-3 mt-4 mb-5">
-    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" *ngFor="let product of productsList ">
-        <div class="product p-3 rounded  position-relative">
 
+    <div #product class="col-xl-2 col-lg-3 col-md-4 col-sm-6" *ngFor="let product of productsList
+    | search : searchedItem ">
+
+        <div class="product p-3 rounded  position-relative">
             <ul class="product-info list-unstyled text-white">
                 <li class="cursor-pointer" [routerLink]="['/product-details', product._id]">
                     <i class="fa fa-search fs-6"></i>
@@ -58,6 +64,7 @@
             </div>
 
         </div>
+
     </div>
 
 

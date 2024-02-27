@@ -15,6 +15,10 @@ export class AccountSettingsComponent implements OnInit {
 
   constructor(private _AuthenticationService: AuthenticationService) { }
   ngOnInit(): void {
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
     this.getUserInfo()
     this.isLoadingLayer()
   }

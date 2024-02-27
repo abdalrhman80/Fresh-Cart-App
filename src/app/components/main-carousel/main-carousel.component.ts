@@ -13,7 +13,7 @@ export class MainCarouselComponent {
     autoplayTimeout: 3000,
     autoplaySpeed: 700,
     mouseDrag: true,
-    touchDrag: false,
+    touchDrag: true,
     pullDrag: false,
     dots: false,
     navSpeed: 700,

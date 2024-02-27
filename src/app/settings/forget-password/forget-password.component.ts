@@ -12,9 +12,6 @@ export class ForgetPasswordComponent implements OnInit {
   isLoadingLayer: boolean = false
   isLoading: boolean = false
   apiError: string = ''
-  // showModelMessage: boolean = false
-  // apiResponse: string = ''
-
 
   constructor(
     private _AuthenticationService: AuthenticationService,
@@ -26,6 +23,10 @@ export class ForgetPasswordComponent implements OnInit {
   })
 
   ngOnInit(): void {
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
     this.isLoadingMethod()
   }
 

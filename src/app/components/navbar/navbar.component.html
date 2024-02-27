@@ -1,15 +1,16 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top py-lg-1">
     <div class="container">
-        <!-- <a [class.cursor-pointer]="isLogin"> -->
+
         <a class="cursor-pointer">
-            <!-- <img *ngIf="!isLogin" src="assets/freshcart-logo.svg" alt="Logo"> -->
-            <img src="assets/freshcart-logo.svg" routerLink="home" alt="Logo">
+            <img src="assets/freshcart-logo.svg" routerLink="home" alt="Logo" (click)="closeNav()">
         </a>
+
         <button #navbarToggler class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        
         <div #navbarCollapse class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul *ngIf="isLogin" class="navbar-nav me-auto mb-2 mb-lg-0 ms-0 m-lg-2 mt-0 pb-lg-2">
                 <li class="nav-item">
@@ -74,10 +75,6 @@
                             <i class="fa-solid fa-circle-user fs-4 cursor-pointer p-2 "
                                 [routerLink]="['/settings/accountSettings']" (click)="closeNav()"></i>
                         </li>
-
-                        <!-- <li class=" nav-item logout">
-                            <i class="fa-solid fa-arrow-right-from-bracket fs-4 cursor-pointer p-2" (click)="logout()"></i>
-                        </li> -->
 
                     </div>
                     <li class=" nav-item logout">

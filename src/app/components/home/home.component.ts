@@ -13,7 +13,6 @@ export class HomeComponent implements OnInit {
   productsList: productData[] = []
   wishListIDs: any[] = []
   cartListIDs: any[] = []
-  searchedItem: string = ''
   isUser: boolean = false;
   isLoading: boolean = false;
   pageNumber: number = 0;
@@ -28,6 +27,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.isLoading = true
     document.body.style.overflow = 'hidden'
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
     this.getAllProducts();
     if (localStorage.getItem('userToken')) {
       this.isUser = true

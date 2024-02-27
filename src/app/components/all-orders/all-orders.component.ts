@@ -15,6 +15,10 @@ export class AllOrdersComponent implements OnInit {
   constructor(private _OrdersService: OrdersService) { }
 
   ngOnInit(): void {
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
     document.body.style.overflow = 'hidden'
     this.isLoading = true
     this._OrdersService.decodeUserToken()

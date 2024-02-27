@@ -22,6 +22,10 @@ export class UpdateDataComponent implements OnInit {
     private _AuthenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
     this.isLoadingLayerMethod()
   }
 

@@ -49,6 +49,10 @@ export class NavbarComponent implements OnInit {
   logout() {
     this.closeNav();
     this._AuthenticationService.logout()
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
   }
 
   closeNav() {

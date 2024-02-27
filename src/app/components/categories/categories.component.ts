@@ -14,6 +14,10 @@ export class CategoriesComponent implements OnInit {
   constructor(private _ProductService: ProductService) { }
 
   ngOnInit(): void {
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
     this.isLoading = true
     this.getAllCategories()
   }

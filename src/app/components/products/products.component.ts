@@ -13,6 +13,7 @@ export class ProductsComponent implements OnInit {
   productsList: productData[] = []
   wishListIDs: any[] = []
   cartListIDs: any[] = []
+  searchedItem: string = ''
   isLoading: boolean = false;
   addedToWishList: boolean = false
 
@@ -23,6 +24,10 @@ export class ProductsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
     this.isLoading = true
     this.getAllProducts();
     this.getLoggedUserCart()
