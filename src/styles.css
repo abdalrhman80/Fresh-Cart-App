@@ -12,7 +12,31 @@
 }
 
 body {
+    --sb-track-color: #eceeef;
+    --sb-thumb-color: #3bb77e;
+    --sb-size: 14px;
     font-family: var(--font-family) !important;
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 0px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
 }
 
 ::selection {
@@ -41,14 +65,6 @@ a,
 a:hover {
     text-decoration: none;
 }
-
-/* .form-control:focus {
-    color: var(--bs-body-color);
-    background-color: var(--bs-body-bg);
-    border-color: #86b7fe;
-    outline: 0;
-    box-shadow: 0 0 0 0.15rem var(--main-hover-color);
-} */
 
 .product {
     transition: box-shadow .4s;

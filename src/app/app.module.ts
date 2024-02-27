@@ -33,6 +33,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
 import { AddHeaderInterceptor } from './add-header.interceptor';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ArrowUpComponent } from './components/arrow-up/arrow-up.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +59,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     WishlistComponent,
     AllOrdersComponent,
     OrderDetailsComponent,
+    ArrowUpComponent,
   ],
   imports: [
     BrowserModule,
