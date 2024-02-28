@@ -10,7 +10,7 @@
         | paginate: { itemsPerPage: 10, currentPage: pageNumber, totalItems: limit }">
 
         <div class="product p-3 rounded  position-relative">
-            <ul *ngIf="isUser" class="product-info list-unstyled text-white">
+            <ul class="product-info list-unstyled text-white">
                 <li class="cursor-pointer" [routerLink]="['/product-details', product._id]">
                     <i class="fa fa-search fs-6"></i>
                 </li>
